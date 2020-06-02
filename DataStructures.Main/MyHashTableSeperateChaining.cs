@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructures.Tests
+namespace DataStructures.Main
 {
-    public class MyHashTableTests
+    public class MyHashTableSeperateChaining
     {
     }
 }
