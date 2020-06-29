@@ -279,6 +279,16 @@ namespace DataStructures.Tests
             Assert.Equal(elements.Length, size);
 
         }
+        [Fact]
+        public void Test_using_enumerator()
+        {
+            int[] elements = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            MyDynamicArray<int> arr = new MyDynamicArray<int>(100);
+
+            using (var e = arr.GetEnumerator())
+                Assert.NotNull(e);
+
+        }
 
         // Private helper methods for testing
         private void FillDynamicArray<T>(MyDynamicArray<T> arr, int length, T val)

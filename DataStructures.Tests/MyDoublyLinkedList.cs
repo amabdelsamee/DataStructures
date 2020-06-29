@@ -244,5 +244,18 @@ namespace DataStructures.Tests
 
         }
 
+
+        [Fact]
+        public void Test_using_enumerator()
+        {
+            int[] elements = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            foreach (var e in elements) list.Add(e);
+
+            using (var e = list.GetEnumerator())
+                Assert.NotNull(e);
+
+        }
+
     }
 }
